@@ -1,6 +1,6 @@
 {
   "name": "nextj-boilerplate",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "author": {
@@ -21,7 +21,6 @@
     "start": "next start",
     "build": "next build",
     "test:ci": "jest --ci",
-    "prepare": "husky install",
     "test:watch": "jest --watch",
     "e2e:ui": "playwright test --ui",
     "lint-staged": "pnpx lint-staged",
