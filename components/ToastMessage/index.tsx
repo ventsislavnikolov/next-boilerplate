@@ -7,6 +7,8 @@ import Image from 'next/image';
 import ToastViewport from './ToastMessageViewport';
 import ToastDescription from './ToastMessageDescription';
 
+import closeIcon from '../../public/icons/closeIcon.svg';
+
 const defaultToastStyles = [
   'w-[360px]',
   'data-[state=closed]:animate-hide',
@@ -55,7 +57,7 @@ export default function Render({ isOpen, message, severity, onOpenChange }: Rend
         onOpenChange={() => onOpenChange()}>
         <ToastDescription message={message} />
         <Toast.Close>
-          <Image src='/icons/closeIcon.svg' width={24} height={24} alt='close icon' />
+          <Image src={closeIcon} width={24} height={24} alt='close icon' />
         </Toast.Close>
       </Toast.Root>
       <ToastViewport />

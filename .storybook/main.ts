@@ -1,5 +1,4 @@
 import type { StorybookConfig } from '@storybook/nextjs';
-import path from 'path';
 
 const config: StorybookConfig = {
   stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -9,7 +8,6 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
     'storybook-addon-designs',
-    '@storybook/addon-jest',
     {
       name: '@storybook/addon-styling',
       options: {
