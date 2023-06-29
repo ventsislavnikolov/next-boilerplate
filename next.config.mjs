@@ -33,7 +33,7 @@ export default withBundleAnalyzer(
       silent: true,
 
       org: 'ventsislavnikolov',
-      project: 'nextjs-boilerplate',
+      project: 'next-boilerplate',
     },
     {
       // For all available options, see:

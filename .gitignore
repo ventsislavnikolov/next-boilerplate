@@ -53,3 +53,5 @@ next.config.original.js
 # Swc and env
 .swc
 .env
+# Sentry Auth Token
+.sentryclirc
