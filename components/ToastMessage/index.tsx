@@ -3,8 +3,8 @@ import { cva } from 'class-variance-authority';
 import { twMerge } from 'tailwind-merge';
 import Image from 'next/image';
 
-// import closeIcon from 'assets/icons/closeIcon.svg';
-// import forbidIcon from 'assets/icons/forbidIcon.svg';
+import ToastViewport from './ToastMessageViewport';
+import ToastDescription from './ToastMessageDescription';
 
 const defaultToastStyles = [
   'w-[360px]',
@@ -37,43 +37,6 @@ const root = cva([...defaultToastStyles], {
   },
 });
 
-const description = cva(['flex', 'items-center', 'justify-start'], {
-  variants: {
-    intent: {
-      primary: ['text-center', 'text-white', '[grid-area:_title]'],
-    },
-    size: {
-      md: ['text-[15px]'],
-    },
-  },
-  defaultVariants: {
-    size: 'md',
-  },
-});
-
-const viewport = cva(
-  ['fixed', 'bottom-0', 'right-0', 'z-[2147483647]', 'm-0', 'flex', 'list-none', 'flex-col'],
-  {
-    variants: {
-      intent: {
-        primary: [
-          'gap-[10px]',
-          'p-[var(--viewport-padding)]',
-          'outline-none',
-          '[--viewport-padding:_25px]',
-        ],
-      },
-      size: {
-        md: ['w-[402px]', 'max-w-[100vw]'],
-      },
-    },
-    defaultVariants: {
-      intent: 'primary',
-      size: 'md',
-    },
-  },
-);
-
 export interface RenderProps {
   isOpen: boolean;
   message: string;
@@ -89,21 +52,12 @@ export default function Render({ isOpen, message, severity, onOpenChange }: Rend
         open={isOpen}
         duration={3000}
         onOpenChange={() => onOpenChange()}>
-        <Toast.Description className={description()}>
-          <Image
-            src='/icons/forbidIcon.svg'
-            width={24}
-            height={24}
-            alt='forbid icon'
-            className='pr-2'
-          />
-          {message}
-        </Toast.Description>
+        <ToastDescription message={message} />
         <Toast.Close>
           <Image src='/icons/closeIcon.svg' width={24} height={24} alt='close icon' />
         </Toast.Close>
       </Toast.Root>
-      <Toast.Viewport className={viewport()} />
+      <ToastViewport />
     </>
   );
 }

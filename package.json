@@ -1,6 +1,6 @@
 {
   "name": "nextj-boilerplate",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "license": "MIT",
   "author": {
@@ -106,15 +106,16 @@
     "@semantic-release/github": "^9.0.3",
     "@semantic-release/npm": "^10.0.4",
     "@semantic-release/release-notes-generator": "^11.0.3",
-    "@storybook/addon-a11y": "^7.0.23",
-    "@storybook/addon-essentials": "^7.0.23",
-    "@storybook/addon-interactions": "^7.0.23",
-    "@storybook/addon-links": "^7.0.23",
-    "@storybook/addon-storysource": "^7.0.23",
+    "@storybook/addon-a11y": "^7.0.24",
+    "@storybook/addon-coverage": "^0.0.8",
+    "@storybook/addon-essentials": "^7.0.24",
+    "@storybook/addon-interactions": "^7.0.24",
+    "@storybook/addon-links": "^7.0.24",
+    "@storybook/addon-storysource": "^7.0.24",
     "@storybook/addon-styling": "^1.1.0",
-    "@storybook/blocks": "^7.0.23",
-    "@storybook/nextjs": "^7.0.23",
-    "@storybook/react": "^7.0.23",
+    "@storybook/blocks": "^7.0.24",
+    "@storybook/nextjs": "^7.0.24",
+    "@storybook/react": "^7.0.24",
     "@storybook/test-runner": "^0.11.0",
     "@storybook/testing-library": "^0.1.0",
     "@testing-library/dom": "^9.3.1",
@@ -132,7 +133,7 @@
     "postcss-loader": "^7.3.3",
     "semantic-release": "^21.0.5",
     "semantic-release-ado": "^1.4.0",
-    "storybook": "^7.0.23",
+    "storybook": "^7.0.24",
     "storybook-addon-designs": "7.0.0-beta.2"
   }
 }

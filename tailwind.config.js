@@ -13,8 +13,8 @@ module.exports = {
     extend: {
       colors: {
         ...white,
-        primary: '#1a202c',
         error: '#e53e3e',
+        primary: '#0275d8',
         success: '#38a169',
       },
       fontFamily: {

@@ -38,5 +38,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "env.ts"],
-  "exclude": ["node_modules", "public", "playwright.config.ts", "stories"]
+  "exclude": ["node_modules", "public", "playwright.config.ts"]
 }

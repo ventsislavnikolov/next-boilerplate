@@ -1,13 +1,14 @@
 import type { StorybookConfig } from '@storybook/nextjs';
+import path from 'path';
 
 const config: StorybookConfig = {
-  stories: ['../stories/**/*.mdx', '../stories/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    '@storybook/addon-a11y',
     '@storybook/addon-links',
-    'storybook-addon-designs',
     '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
     '@storybook/addon-interactions',
+    'storybook-addon-designs',
     {
       name: '@storybook/addon-styling',
       options: {
@@ -22,6 +23,11 @@ const config: StorybookConfig = {
         },
       },
     },
+    '@storybook/addon-coverage',
+    {
+      name: '@storybook/addon-styling',
+      options: {},
+    },
   ],
   framework: {
     name: '@storybook/nextjs',
@@ -29,6 +35,16 @@ const config: StorybookConfig = {
   },
   docs: {
     autodocs: 'tag',
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      compilerOptions: {
+        allowSyntheticDefaultImports: false,
+        esModuleInterop: false,
+      },
+      propFilter: () => true,
+    },
   },
 };
 export default config;

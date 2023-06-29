@@ -13,7 +13,7 @@ describe('Home Component', () => {
   const useRouter = jest.spyOn(require('next/router'), 'useRouter');
   const locale = 'en';
   // eslint-disable-next-line import/no-dynamic-require
-  const messages = require(`../../translations/${locale}/common.json`);
+  const messages = require(`../../translations/locale/${locale}.json`);
 
   useRouter.mockImplementationOnce(() => ({
     query: { locale },

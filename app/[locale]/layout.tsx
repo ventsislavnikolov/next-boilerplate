@@ -14,7 +14,7 @@ const roboto = Roboto({
 export default async function Layout({ children, params: { locale } }: any) {
   let messages;
   try {
-    messages = (await import(`../../translations/${locale}/common.json`)).default;
+    messages = (await import(`../../translations/locale/${locale}.json`)).default;
   } catch (error) {
     notFound();
   }

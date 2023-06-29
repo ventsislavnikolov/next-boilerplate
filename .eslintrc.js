@@ -47,11 +47,13 @@ module.exports = {
   },
   rules: {
     'global-require': 'off',
+    'react/prop-types': 'off',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
     'react/react-in-jsx-scope': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
     'import/no-import-module-exports': 'off',
+    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-function': 'off', // TODO: Remove this rule and fix all empty functions
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
