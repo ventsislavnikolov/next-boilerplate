@@ -33,7 +33,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "prettier": "prettier --check \"**/*.{js,jsx}\"",
     "prettier:fix": "prettier --write \"**/*.{js,jsx}\"",
-    "storybook": "cross-env FORCE_COLOR=1 storybook dev -p 6006",
+    "storybook": "storybook dev -p 6006",
     "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "coupling-graph": "npx madge --extensions js,jsx,css,md,mdx ./ --exclude 'vite.config.js|test-setup.js|tailwind.config.js|release.config.js|README.md|prettier.config.js|postcss.config.js|playwright.config.js|pnpm-lock.yaml|lint-staged.config.js|jsconfig.json|commitlint.config.js|e2e/|dist|.husky|.github|node_modules|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
@@ -114,6 +114,7 @@
     "@storybook/addon-storysource": "^7.0.24",
     "@storybook/addon-styling": "^1.1.0",
     "@storybook/blocks": "^7.0.24",
+    "@storybook/jest": "0.1.1-next.1",
     "@storybook/nextjs": "^7.0.24",
     "@storybook/react": "^7.0.24",
     "@storybook/test-runner": "^0.11.0",

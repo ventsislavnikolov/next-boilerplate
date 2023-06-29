@@ -5,7 +5,7 @@
     "noEmit": true,
     "strict": true,
     "allowJs": false,
-    "jsx": "preserve",
+    "jsx": "react",
     "module": "ESNext",
     "composite": false,
     "incremental": true,

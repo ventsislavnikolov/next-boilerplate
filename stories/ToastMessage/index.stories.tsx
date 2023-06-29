@@ -1,7 +1,7 @@
 import React from 'react';
 import * as Toast from '@radix-ui/react-toast';
 
-import { ToastMessage } from '../../components';
+import { ToastMessage } from 'components';
 
 const meta = {
   component: ToastMessage,

@@ -9,6 +9,7 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-interactions',
     'storybook-addon-designs',
+    '@storybook/addon-jest',
     {
       name: '@storybook/addon-styling',
       options: {
