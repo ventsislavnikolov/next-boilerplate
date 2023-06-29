@@ -11,5 +11,4 @@ module.exports = {
   jsxSingleQuote: true,
   arrowParens: 'always',
   jsxBracketSameLine: true,
-  tailwindConfig: './tailwind.config.js',
 };

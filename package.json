@@ -83,7 +83,7 @@
     "eslint-plugin-tailwindcss": "^3.12.1",
     "eslint-plugin-testing-library": "^5.11.0",
     "next": "13.4.7",
-    "next-intl": "2.15.0-beta.3",
+    "next-intl": "2.16.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
