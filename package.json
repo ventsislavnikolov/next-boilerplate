@@ -28,14 +28,14 @@
     "test:coverage": "jest --coverage",
     "test-storybook": "test-storybook",
     "build-storybook": "storybook build",
-    "lint:fix": "eslint ./src/**/*.jsx --fix",
+    "lint:fix": "eslint ./src/**/*.tsx --fix",
     "commitlint": "npx --no -- commitlint --edit",
     "analyze": "cross-env ANALYZE=true next build",
-    "prettier": "prettier --check \"**/*.{js,jsx}\"",
-    "prettier:fix": "prettier --write \"**/*.{js,jsx}\"",
+    "prettier": "prettier --check \"**/*.{ts,tsx,js,jsx}\"",
+    "prettier:fix": "prettier --write \"**/*.{ts,tsx,js,jsx}\"",
     "storybook": "storybook dev -p 6006",
     "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
-    "coupling-graph": "npx madge --extensions js,jsx,css,md,mdx ./ --exclude 'vite.config.js|test-setup.js|tailwind.config.js|release.config.js|README.md|prettier.config.js|postcss.config.js|playwright.config.js|pnpm-lock.yaml|lint-staged.config.js|jsconfig.json|commitlint.config.js|e2e/|dist|.husky|.github|node_modules|README.md|.storybook/|.eslintrc.js' --image graph.svg"
+    "coupling-graph": "npx madge --extensions ts,tsx,js,jsx,css,md,mdx ./ --exclude 'vite.config.js|test-setup.js|tailwind.config.js|release.config.js|README.md|prettier.config.js|postcss.config.js|playwright.config.js|pnpm-lock.yaml|lint-staged.config.js|jsconfig.json|commitlint.config.js|e2e/|dist|.husky|.github|node_modules|README.md|.storybook/|.eslintrc.js' --image graph.svg"
   },
   "engines": {
     "node": ">=18.16.0",
