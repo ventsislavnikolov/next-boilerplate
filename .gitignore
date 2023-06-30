@@ -55,3 +55,4 @@ next.config.original.js
 .env
 # Sentry Auth Token
 .sentryclirc
+build-storybook.log
