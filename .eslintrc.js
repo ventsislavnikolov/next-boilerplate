@@ -46,13 +46,14 @@ module.exports = {
     },
   },
   rules: {
-    'global-require': 'off',
-    'react/prop-types': 'off',
-    'import/extensions': 'off',
-    'import/no-unresolved': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'import/no-import-module-exports': 'off',
-    '@typescript-eslint/no-var-requires': 'off',
+    'global-require': 'off', // TODO: Remove this rule and fix all require types
+    'react/prop-types': 'off', // TODO: Remove this rule and fix all prop types
+    'import/extensions': 'off', // TODO: Remove this rule and fix all imports
+    'import/no-unresolved': 'off', // TODO: Remove this rule and fix all imports
+    'react/react-in-jsx-scope': 'off', // TODO: Remove this rule and fix all react imports
+    'import/no-import-module-exports': 'off', // TODO: Remove this rule and fix all import types
+    '@typescript-eslint/no-var-requires': 'off', // TODO: Remove this rule and fix all require types
+    'consistent-return': 'off', // TODO: Remove this rule and fix all return types
     '@typescript-eslint/no-explicit-any': 'off', // TODO: Remove this rule and fix all any types
     '@typescript-eslint/no-empty-function': 'off', // TODO: Remove this rule and fix all empty functions
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
