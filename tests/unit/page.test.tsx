@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { NextIntlProvider } from 'next-intl';
 
 import applicationApi from 'store/services/applicationApi';
@@ -9,15 +9,18 @@ import applicationReducer from 'store/reducers/applicationSlice';
 import toastReducer from 'store/reducers/toastSlice';
 import Home from '../../app/[locale]/page';
 
+jest.mock('next/navigation', () => ({
+  useRouter: () => ({
+    locale: 'en',
+    push: jest.fn(),
+    replace: jest.fn(),
+  }),
+}));
+
 describe('Home Component', () => {
-  const useRouter = jest.spyOn(require('next/router'), 'useRouter');
   const locale = 'en';
   // eslint-disable-next-line import/no-dynamic-require
   const messages = require(`../../translations/${locale}.json`);
-
-  useRouter.mockImplementationOnce(() => ({
-    query: { locale },
-  }));
 
   const store = configureStore({
     reducer: {
