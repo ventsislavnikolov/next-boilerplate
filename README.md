@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with
 
 ## Description
 
-Boilerplate for ReactJS projects with all the necessary tools and configurations.
+Boilerplate for NextJS projects with all the necessary tools and configurations.
 
 ## Requirements
 
