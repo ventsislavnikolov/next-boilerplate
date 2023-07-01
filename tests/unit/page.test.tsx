@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { NextIntlProvider } from 'next-intl';
 
 import applicationApi from 'store/services/applicationApi';
@@ -15,6 +15,10 @@ jest.mock('next/navigation', () => ({
     push: jest.fn(),
     replace: jest.fn(),
   }),
+}));
+
+jest.mock('next-intl/client', () => ({
+  usePathname: jest.fn(),
 }));
 
 describe('Home Component', () => {
