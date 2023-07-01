@@ -54,7 +54,8 @@ export default function Render({ isOpen, message, severity, onOpenChange }: Rend
         className={twMerge(root({ intent: severity }))}
         open={isOpen}
         duration={3000}
-        onOpenChange={() => onOpenChange()}>
+        onOpenChange={() => onOpenChange()}
+      >
         <ToastDescription message={message} />
         <Toast.Close>
           <Image src={closeIcon} width={24} height={24} alt='close icon' />
