@@ -53,6 +53,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     'import/no-import-module-exports': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-explicit-any': 'off', // TODO: Remove this rule and fix all any types
     '@typescript-eslint/no-empty-function': 'off', // TODO: Remove this rule and fix all empty functions
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
