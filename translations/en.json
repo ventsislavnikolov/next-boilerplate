@@ -2,6 +2,7 @@
     "title": "Hello Boilerplate!",
     "description": "A simple boilerplate for creating a new project.",
     "Index": {
+        "english": "English",
         "hello-boilerplate": "Hello Boilerplate!"
     }
 }
