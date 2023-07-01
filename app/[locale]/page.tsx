@@ -30,7 +30,8 @@ export default function Home() {
         <button
           type='button'
           className='float-right mb-2 mr-4 rounded bg-white px-4 py-2 text-gray-800'
-          onClick={() => handleButtonClick(locale === 'en' ? 'en' : 'en')}>
+          onClick={() => handleButtonClick(locale === 'en' ? 'en' : 'en')}
+        >
           {locale === 'en' ? t('english') : t('english')}
         </button>
       </header>

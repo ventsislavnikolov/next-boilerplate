@@ -10,6 +10,5 @@ module.exports = {
   trailingComma: 'all',
   jsxSingleQuote: true,
   arrowParens: 'always',
-  jsxBracketSameLine: true,
   tailwindConfig: './tailwind.config.js',
 };

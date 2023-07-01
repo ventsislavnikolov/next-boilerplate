@@ -56,6 +56,8 @@ module.exports = {
     'consistent-return': 'off', // TODO: Remove this rule and fix all return types
     '@typescript-eslint/no-explicit-any': 'off', // TODO: Remove this rule and fix all any types
     '@typescript-eslint/no-empty-function': 'off', // TODO: Remove this rule and fix all empty functions
+    'react/destructuring-assignment': 'off', // TODO: Remove this rule and fix all destructuring assignments
+    'react/function-component-definition': 'off', // TODO: Remove this rule and fix all function components
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx', '.ts'] }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
