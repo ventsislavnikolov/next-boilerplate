@@ -21,6 +21,7 @@
     "start": "next start",
     "build": "next build",
     "test:ci": "jest --ci",
+    "prepare": "husky install",
     "test:watch": "jest --watch",
     "e2e:ui": "playwright test --ui",
     "lint-staged": "pnpx lint-staged",
