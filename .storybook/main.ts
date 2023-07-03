@@ -6,23 +6,10 @@ const config: StorybookConfig = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
+    '@storybook/addon-storysource',
     '@storybook/addon-interactions',
-    'storybook-addon-designs',
-    {
-      name: '@storybook/addon-styling',
-      options: {
-        postCss: true,
-      },
-    },
-    {
-      name: '@storybook/addon-storysource',
-      options: {
-        loaderOptions: {
-          prettierConfig: { printWidth: 100, singleQuote: true },
-        },
-      },
-    },
     '@storybook/addon-coverage',
+    'storybook-dark-mode',
     {
       name: '@storybook/addon-styling',
       options: {},

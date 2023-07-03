@@ -2,13 +2,13 @@ import { white } from '@radix-ui/colors';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',
     './pages/**/*.{js,ts,jsx,tsx}',
     './stories/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
   ],
-  darkMode: ['class', '[data-mode="dark"]'],
   theme: {
     extend: {
       colors: {

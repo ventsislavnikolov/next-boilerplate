@@ -25,18 +25,20 @@ export default function Home() {
   }
 
   return (
-    <div className='flex min-h-screen flex-col'>
+    <div className='flex min-h-screen flex-col bg-white dark:bg-slate-800'>
       <header className='py-4'>
         <button
           type='button'
-          className='float-right mb-2 mr-4 rounded bg-white px-4 py-2 text-gray-800'
+          className='float-right mb-2 mr-4 rounded bg-white px-4 py-2 text-gray-800 dark:bg-slate-800 dark:text-white'
           onClick={() => handleButtonClick(locale === 'en' ? 'en' : 'en')}
         >
           {locale === 'en' ? t('english') : t('english')}
         </button>
       </header>
       <main className='flex flex-1 flex-col items-center justify-between p-24'>
-        <p className='pb-3 text-2xl underline'>{t('hello-boilerplate')}</p>
+        <p className='pb-3 text-2xl text-slate-800 underline dark:text-white'>
+          {t('hello-boilerplate')}
+        </p>
       </main>
       <footer className='flex items-center justify-center py-6'>
         Copyright {new Date().getFullYear()}
