@@ -6,6 +6,8 @@ import { createTranslator, NextIntlClientProvider } from 'next-intl';
 
 import { ReduxProvider, ToastProvider } from 'providers';
 
+import { languages } from 'utils';
+
 async function getMessages(locale: string) {
   try {
     return (await import(`../../translations/${locale}.json`)).default;
@@ -15,7 +17,7 @@ async function getMessages(locale: string) {
 }
 
 export async function generateStaticParams() {
-  return ['en'].map((locale) => ({ locale }));
+  return languages.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({ params: { locale } }) {

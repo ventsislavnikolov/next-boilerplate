@@ -1,14 +1,10 @@
-import { ReactNode } from 'react';
+'use client';
 
-import Providers from 'store/provider';
+import React from 'react';
 
-type Props = {
-  children: ReactNode;
-};
+import { store } from 'store';
+import { Provider } from 'react-redux';
 
-// Even though this component is just passing its children through, the presence
-// of this file fixes an issue in Next.js 13.3.0 where link clicks that switch
-// the locale would otherwise be ignored.
-export default function ReduxProvider({ children }: Props) {
-  return <Providers>{children}</Providers>;
+export default function Providers({ children }: { children: React.ReactNode }) {
+  return <Provider store={store}>{children}</Provider>;
 }
