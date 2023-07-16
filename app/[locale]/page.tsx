@@ -39,6 +39,14 @@ export default function Home() {
         <p className='pb-3 text-2xl text-slate-800 underline dark:text-white'>
           {t('hello-boilerplate')}
         </p>
+        <button
+          type='button'
+          onClick={() => {
+            throw new Error('Sentry Frontend Error');
+          }}
+        >
+          Throw error
+        </button>
       </main>
       <footer className='flex items-center justify-center py-6'>
         Copyright {new Date().getFullYear()}

@@ -1,17 +1,22 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { HYDRATE } from 'next-redux-wrapper';
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: 'https://pokeapi.co/api/v2/',
   credentials: 'same-origin',
   mode: 'cors',
 });
 
 const applicationApi = createApi({
-  reducerPath: 'applicationApi',
+  reducerPath: 'application',
   baseQuery,
+  extractRehydrationInfo(action, { reducerPath }) {
+    if (action.type === HYDRATE) {
+      return action.payload[reducerPath];
+    }
+  },
   endpoints: (builder) => ({
     getAbility: builder.query({
-      query: (params) => `ability/?limit=${params.limit}&offset=${params.offset}`,
+      query: (params) => `/api/ability/?limit=${params.limit}&offset=${params.offset}`,
     }),
   }),
 });

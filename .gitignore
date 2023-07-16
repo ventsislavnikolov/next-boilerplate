@@ -42,9 +42,6 @@ graph.svg
 tsconfig.tsbuildinfo
 
 # Sentry
-.sentryclirc
-
-# Sentry
 next.config.original.js
 
 # Sentry Auth Token
@@ -53,6 +50,9 @@ next.config.original.js
 # Swc and env
 .swc
 .env
-# Sentry Auth Token
-.sentryclirc
+
+# Storybook
 build-storybook.log
+
+# Bundle Analyzer
+/analyze

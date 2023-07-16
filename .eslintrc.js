@@ -46,6 +46,7 @@ module.exports = {
     },
   },
   rules: {
+    'import/prefer-default-export': 'off', // TODO: Remove this rule and fix all imports
     'global-require': 'off', // TODO: Remove this rule and fix all require types
     'react/prop-types': 'off', // TODO: Remove this rule and fix all prop types
     'import/extensions': 'off', // TODO: Remove this rule and fix all imports
