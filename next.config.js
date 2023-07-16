@@ -22,8 +22,8 @@ module.exports = withBundleAnalyzer(
     nextConfig,
     {
       silent: true,
-      org: 'ventsislavnikolov',
-      project: 'next-boilerplate',
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
     },
     {
       // Hides source maps from generated client bundles
