@@ -4,8 +4,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { render, screen } from '@testing-library/react';
 import { NextIntlProvider } from 'next-intl';
 
-import applicationApi from 'store/services/applicationApi';
-import applicationReducer from 'store/reducers/applicationSlice';
+import application from 'store/services/applicationApi';
 import toastReducer from 'store/reducers/toastSlice';
 import Home from '../../app/[locale]/page';
 
@@ -29,10 +28,9 @@ describe('Home Component', () => {
   const store = configureStore({
     reducer: {
       toast: toastReducer,
-      application: applicationReducer,
-      [applicationApi.reducerPath]: applicationApi.reducer,
+      [application.reducerPath]: application.reducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(applicationApi.middleware),
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(application.middleware),
   });
 
   it('renders a heading', () => {
