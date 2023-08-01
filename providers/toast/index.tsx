@@ -12,7 +12,6 @@ import { setToastInitialState } from 'store/reducers/toastSlice';
 
 export default function ToastProvider({ children }) {
   const dispatch = useDispatch();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const toast = useSelector((state: any) => state.toast);
 
   return (
