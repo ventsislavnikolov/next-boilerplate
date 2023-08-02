@@ -1,4 +1,5 @@
-module.exports = {
+/** @type {import("prettier").Options} */
+export default {
   semi: true,
   tabWidth: 2,
   useTabs: false,
@@ -10,6 +11,6 @@ module.exports = {
   trailingComma: 'all',
   jsxSingleQuote: true,
   arrowParens: 'always',
-  plugins: [require('prettier-plugin-tailwindcss')],
+  plugins: ['prettier-plugin-tailwindcss'],
   tailwindConfig: './tailwind.config.js',
 };
