@@ -39,6 +39,9 @@ jobs:
       - name: Install wait-on
         run: npm install -g wait-on
 
+      - name: Install playwright
+        run: pnpm exec playwright install
+
       - name: Smoke & Acceptance tests
         run: |
           pnpm build-storybook --quiet
