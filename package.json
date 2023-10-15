@@ -136,6 +136,7 @@
     "semantic-release-ado": "1.4.0",
     "storybook": "7.4.6",
     "storybook-addon-designs": "6.3.1",
-    "storybook-dark-mode": "3.0.1"
+    "storybook-dark-mode": "3.0.1",
+    "whatwg-fetch": "^3.6.19"
   }
 }
