@@ -8,6 +8,9 @@ const nextConfig = {
     loader: 'default',
     domains: ['res.cloudinary.com'],
   },
+  experimental: {
+    webpackBuildWorker: true,
+  },
   rewrites() {
     return [{ source: '/ping', destination: '/api/ping' }];
   },
