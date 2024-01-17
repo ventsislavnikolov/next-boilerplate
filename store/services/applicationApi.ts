@@ -9,7 +9,7 @@ const baseQuery = fetchBaseQuery({
 const applicationApi = createApi({
   reducerPath: 'application',
   baseQuery,
-  extractRehydrationInfo(action, { reducerPath }) {
+  extractRehydrationInfo(action: any, { reducerPath }) {
     if (action.type === HYDRATE) {
       return action.payload[reducerPath];
     }
