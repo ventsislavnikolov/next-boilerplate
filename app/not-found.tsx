@@ -1,7 +1,6 @@
 'use client';
 
 import Error from 'next/error';
-
 import { languages } from 'utils';
 
 export default function NotFound() {

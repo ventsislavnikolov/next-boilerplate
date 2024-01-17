@@ -1,7 +1,7 @@
 import { white } from '@radix-ui/colors';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx}',

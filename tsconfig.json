@@ -1,58 +1,49 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "target": "ES6",
-    "noEmit": true,
-    "strict": true,
-    "allowJs": false,
-    "jsx": "preserve",
-    "module": "ESNext",
-    "composite": false,
     "incremental": true,
-    "declaration": false,
-    "skipLibCheck": true,
+    "composite": false,
+    "target": "ES6",
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "esnext", "es2015.iterable", "ES2015"],
+    "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./*"],
+    },
+    "resolveJsonModule": true,
+    "allowJs": false,
+    "strict": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitAny": false,
-    "inlineSources": false,
     "noImplicitThis": true,
     "noUnusedLocals": false,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "downlevelIteration": true,
     "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "noFallthroughCasesInSwitch": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "inlineSources": false,
+    "noEmit": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "es2015.iterable"
-    ],
+    "isolatedModules": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true,
     "plugins": [
       {
-        "name": "next"
-      }
+        "name": "next",
+      },
     ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
   },
   "include": [
-    "next-env.d.ts",
+    "env.ts",
     "**/*.ts",
     "**/*.tsx",
+    "next-env.d.ts",
     ".next/types/**/*.ts",
-    "env.ts"
+    "./tests/jest-setup.ts",
+    "./jest.setup.js",
   ],
-  "exclude": [
-    "node_modules",
-    "public",
-    "playwright.config.ts"
-  ]
+  "exclude": ["node_modules", "public", "playwright.config.ts"],
 }

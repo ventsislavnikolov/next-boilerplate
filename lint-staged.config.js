@@ -1,4 +1,4 @@
-module.exports = {
-  '*.{js,jsx}': ['eslint --fix', 'prettier --write'],
-  '*.{css,scss,md}': ['prettier --write'],
+export default {
+  './app/**/*.{ts,tsx}': ['pnpm lint', 'pnpm prettier:write'],
+  './components/**/*.{ts,tsx}': ['pnpm lint', 'pnpm prettier:write'],
 };

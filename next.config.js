@@ -1,36 +1,48 @@
-const { withSentryConfig } = require('@sentry/nextjs');
+import withBundleAnalyzer from '@next/bundle-analyzer';
+import { withSentryConfig } from '@sentry/nextjs';
 
 const nextConfig = {
+  reactStrictMode: false,
   swcMinify: true,
-  reactStrictMode: true,
   images: {
     deviceSizes: [320, 420, 768, 1024, 1200],
     loader: 'default',
-    domains: ['res.cloudinary.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
   experimental: {
-    webpackBuildWorker: true,
+    outputFileTracingExcludes: {
+      '*': ['node_modules/@swc/**/*', 'node_modules/@esbuild/**/*', 'node_modules/terser/**/*'],
+    },
   },
-  rewrites() {
-    return [{ source: '/ping', destination: '/api/ping' }];
+  async rewrites() {
+    return [
+      {
+        source: `/api/:path*`,
+        destination: `/api/:path*`,
+      },
+    ];
   },
 };
 
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
+const withBundleAnalyzerConfig = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-module.exports = withBundleAnalyzer(
-  withSentryConfig(
-    nextConfig,
-    {
-      silent: true,
-      org: process.env.NEXT_PUBLIC_SENTRY_ORG,
-      project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
-    },
-    {
-      // Hides source maps from generated client bundles
-      hideSourceMaps: true,
-    },
-  ),
-);
+const sentryConfig = {
+  silent: true,
+  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
+  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
+};
+
+const withSentry = withSentryConfig(nextConfig, sentryConfig, {
+  hideSourceMaps: true,
+});
+
+export default withBundleAnalyzerConfig(withSentry);

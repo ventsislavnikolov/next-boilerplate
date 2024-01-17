@@ -1,18 +1,16 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next-intl/client';
-import { useLocale, useTranslations } from 'next-intl';
-
-// UI components
 import { Loader } from 'components';
+import { useLocale, useTranslations } from 'next-intl';
+import { usePathname } from 'next-intl/client';
+import { useRouter } from 'next/navigation';
 import { useGetAbilityQuery } from 'store/services/applicationApi';
 
 export default function Home() {
   const router = useRouter();
   const locale = useLocale();
   const pathname = usePathname();
-  const t = useTranslations('Index');
+  const t: any = useTranslations();
 
   const { isLoading } = useGetAbilityQuery({ limit: 20, offset: 0 });
 

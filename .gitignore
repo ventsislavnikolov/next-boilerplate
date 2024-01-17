@@ -33,26 +33,26 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-coverage
-stats.html
-playwright-report
-test-results
-storybook-static
-graph.svg
-tsconfig.tsbuildinfo
 
 # Sentry
 next.config.original.js
 
-# Sentry Auth Token
-.sentryclirc
+/test-results/
+/playwright-report/
+/playwright/.cache/
 
 # Swc and env
 .swc
 .env
 
-# Storybook
-build-storybook.log
-
 # Bundle Analyzer
 /analyze
+
+# Sentry
+.sentryclirc
+
+
+.env*
+.flaskenv*
+!.env.project
+!.env.vault
