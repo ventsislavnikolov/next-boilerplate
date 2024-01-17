@@ -56,3 +56,4 @@ next.config.original.js
 .flaskenv*
 !.env.project
 !.env.vault
+storybook-static/
