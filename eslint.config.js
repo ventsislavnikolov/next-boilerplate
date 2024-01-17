@@ -80,6 +80,7 @@ export default vneslint(
         '*.config.ts',
         '*.config.js',
         'global.d.ts',
+        '*.setup.ts',
         'jest.setup.js',
         'next.config.js',
         'postcss.config.cjs',
