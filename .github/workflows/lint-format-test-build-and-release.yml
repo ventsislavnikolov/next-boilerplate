@@ -101,6 +101,8 @@ jobs:
         run: pnpm install
 
       - name: Build
+        env:
+          NEXT_PUBLIC_API_URL: "https://pokeapi.co/api/v2/"
         run: pnpm build
 
   release:
