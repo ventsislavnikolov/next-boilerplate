@@ -1,3 +1,13 @@
+# [2.0.0](https://github.com/ventsislavnikolov/next-boilerplate/compare/v1.0.0...v2.0.0) (2024-01-19)
+
+
+* feat(release)!: remove a lot of stung, change eslint to oxlint and more ([70d467c](https://github.com/ventsislavnikolov/next-boilerplate/commit/70d467c46d07b2fdc1db70a8ab9650511f6a2d4a))
+
+
+### BREAKING CHANGES
+
+* change the flow of the boilerplate
+
 # 1.0.0 (2023-06-29)
 
 
