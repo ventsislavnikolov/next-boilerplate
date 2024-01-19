@@ -132,4 +132,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release@21 --omit=dev --ignore-scripts
+        run: npx semantic-release@23 --omit=dev --ignore-scripts
