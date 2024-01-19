@@ -79,6 +79,8 @@
     "@storybook/react": "7.6.10",
     "@storybook/react-docgen-typescript-plugin": "1.0.1",
     "@storybook/test": "7.6.10",
+    "@storybook/test-runner": "0.16.0",
+    "@storybook/testing-library": "0.2.2",
     "@testing-library/dom": "9.3.4",
     "@testing-library/jest-dom": "6.2.0",
     "@testing-library/react": "14.1.2",
