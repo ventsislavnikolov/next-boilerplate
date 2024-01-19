@@ -1,0 +1,11 @@
+{
+    "rules": {
+        "no-undef": "off",
+        "import/named": "off",
+        "import/default": "off",
+        "unicorn/filename-case": "off",
+        "react/react-in-jsx-scope": "off",
+        "unicorn/no-zero-fractions": "off",
+        "unicorn/no-await-expression-member": "off"
+    }
+}

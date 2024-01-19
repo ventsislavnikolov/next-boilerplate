@@ -1,26 +1,4 @@
 {
-  "css.format.enable": false,
-  "css.format.preserveNewLines": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
-  },
   "editor.formatOnSave": true,
   "eslint.experimental.useFlatConfig": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact",
-    "vue",
-    "html",
-    "markdown",
-    "json",
-    "jsonc",
-    "yaml",
-    "toml"
-  ],
-  "prettier.enable": true,
-  "tailwindCSS.experimental.classRegex": [["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]],
-  "typescript.enablePromptUseWorkspaceTsdk": true
 }

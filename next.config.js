@@ -1,5 +1,6 @@
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
+import NextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig = {
   reactStrictMode: false,
@@ -15,19 +16,6 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  experimental: {
-    outputFileTracingExcludes: {
-      '*': ['node_modules/@swc/**/*', 'node_modules/@esbuild/**/*', 'node_modules/terser/**/*'],
-    },
-  },
-  async rewrites() {
-    return [
-      {
-        source: `/api/:path*`,
-        destination: `/api/:path*`,
-      },
-    ];
   },
 };
 
@@ -45,4 +33,5 @@ const withSentry = withSentryConfig(nextConfig, sentryConfig, {
   hideSourceMaps: true,
 });
 
-export default withBundleAnalyzerConfig(withSentry);
+const withNextIntl = NextIntlPlugin('./src/i18n.ts');
+export default withBundleAnalyzerConfig(withNextIntl(withSentry));

@@ -1,4 +1,4 @@
-import '../app/[locale]/globals.css';
+import '../src/app/[locale]/globals.css';
 
 import { withThemeByClassName } from '@storybook/addon-styling';
 

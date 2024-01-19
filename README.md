@@ -12,7 +12,7 @@ Boilerplate for NextJS projects with all the necessary tools and configurations.
 3. Graphviz
 4. Playwright
 5. Visual Studio Code or any other IDE
-6. ESLint for Visual Studio Code (or any other IDE with ESLint support)
+6. OXC for Visual Studio Code (or any other IDE with OXC support)
 7. Prettier for Visual Studio Code (or any other IDE with Prettier support)
 
 ## Getting Started
@@ -54,7 +54,7 @@ automatically optimize and load Inter, a custom Google Font.
 12. React Testing Library
 13. Playwright
 14. Storybook
-15. ESLint
+15. OXC Linter
 16. Prettier
 17. Husky
 18. Lint Staged
