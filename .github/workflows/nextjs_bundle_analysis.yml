@@ -42,7 +42,7 @@ jobs:
 
       - name: Build next.js app
         env:
-          NEXT_PUBLIC_API_URL: "https://pokeapi.co/api/v2/"
+          API_URL: "https://pokeapi.co/api/v2/"
         run: pnpm build
 
       # Here's the first place where next-bundle-analysis' own script is used

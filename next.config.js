@@ -25,8 +25,8 @@ const withBundleAnalyzerConfig = withBundleAnalyzer({
 
 const sentryConfig = {
   silent: true,
-  org: process.env.NEXT_PUBLIC_SENTRY_ORG,
-  project: process.env.NEXT_PUBLIC_SENTRY_PROJECT,
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
 };
 
 const withSentry = withSentryConfig(nextConfig, sentryConfig, {
