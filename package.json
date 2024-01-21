@@ -18,6 +18,7 @@
   "scripts": {
     "test": "jest",
     "build": "next build",
+    "start": "next start",
     "test:ci": "jest --ci",
     "dev": "next dev --turbo",
     "prepare": "husky install",
