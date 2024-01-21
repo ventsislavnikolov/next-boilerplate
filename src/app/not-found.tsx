@@ -1,7 +1,8 @@
 "use client";
 
 import Error from "next/error";
-import { locales } from "../navigation";
+
+import { locales } from "@/navigation";
 
 export default function NotFound() {
   return (

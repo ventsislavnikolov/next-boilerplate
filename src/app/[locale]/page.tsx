@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { getTranslations, getLocale } from "next-intl/server";
-import env from "@/env";
+import Image from "next/image";
 
+import env from "@/env";
 import { Link } from "@/navigation";
 
 async function getData() {
