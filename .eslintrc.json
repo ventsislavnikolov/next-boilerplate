@@ -1,0 +1,79 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true,
+    "jest": true,
+    "es2021": true,
+    "browser": true,
+    "jest/globals": true
+  },
+  "plugins": ["compat", "lodash", "unicorn", "unused-imports", "@typescript-eslint", "react"],
+  "extends": [
+    "plugin:compat/recommended",
+    "plugin:lodash/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:tailwindcss/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "next"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "compat/compat": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "jsx-quotes": ["error", "prefer-single"],
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
+    "import/named": "off",
+    "import/default": "off",
+    "unicorn/filename-case": "off",
+    "react/react-in-jsx-scope": "off",
+    "unicorn/no-zero-fractions": "off",
+    "lodash/prefer-lodash-method": "off",
+    "unicorn/prevent-abbreviations": "off",
+    "tailwindcss/no-custom-classname": "off",
+    "unicorn/no-await-expression-member": "off"
+  },
+  "overrides": [
+    {
+      "files": ["tests/**"],
+      "plugins": ["vitest", "jest", "jest-dom", "testing-library"],
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest-dom/recommended",
+        "plugin:testing-library/react",
+        "plugin:vitest/recommended"
+      ],
+      "rules": {
+        "jest/expect-expect": "off",
+        "vitest/expect-expect": "off"
+      }
+    }
+  ],
+  "settings": {
+    "polyfills": ["fetch"],
+    "jest": {
+      "version": 29
+    },
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["store", "./src/store"],
+          ["router", "./src/router"],
+          ["assets", "./src/assets"],
+          ["stories", "./src/stories"],
+          ["components", "./src/components"]
+        ],
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+      }
+    }
+  }
+}
