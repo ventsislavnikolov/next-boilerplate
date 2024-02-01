@@ -69,7 +69,7 @@
     "@storybook/addon-a11y": "7.6.11",
     "@storybook/addon-coverage": "1.0.0",
     "@storybook/addon-designs": "7.0.9",
-    "@storybook/addon-essentials": "7.6.11",
+    "@storybook/addon-essentials": "7.6.12",
     "@storybook/addon-interactions": "7.6.11",
     "@storybook/addon-links": "7.6.11",
     "@storybook/addon-onboarding": "1.0.11",
