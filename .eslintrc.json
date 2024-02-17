@@ -45,16 +45,14 @@
   "overrides": [
     {
       "files": ["tests/**"],
-      "plugins": ["vitest", "jest", "jest-dom", "testing-library"],
+      "plugins": ["jest", "jest-dom", "testing-library"],
       "extends": [
         "plugin:jest/recommended",
         "plugin:jest-dom/recommended",
-        "plugin:testing-library/react",
-        "plugin:vitest/recommended"
+        "plugin:testing-library/react"
       ],
       "rules": {
-        "jest/expect-expect": "off",
-        "vitest/expect-expect": "off"
+        "jest/expect-expect": "off"
       }
     }
   ],
