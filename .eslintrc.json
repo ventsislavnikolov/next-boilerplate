@@ -35,6 +35,7 @@
     "import/named": "off",
     "import/default": "off",
     "unicorn/filename-case": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "react/react-in-jsx-scope": "off",
     "unicorn/no-zero-fractions": "off",
     "lodash/prefer-lodash-method": "off",
