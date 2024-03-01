@@ -56,7 +56,7 @@
     "zod": "3.22.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "18.6.1",
+    "@commitlint/cli": "19.0.3",
     "@commitlint/config-conventional": "18.6.2",
     "@commitlint/types": "18.6.1",
     "@next/bundle-analyzer": "14.1.0",
