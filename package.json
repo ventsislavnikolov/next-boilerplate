@@ -93,7 +93,7 @@
     "@types/node": "20.11.20",
     "@types/react": "18.2.58",
     "@types/react-dom": "18.2.19",
-    "@typescript-eslint/eslint-plugin": "7.0.2",
+    "@typescript-eslint/eslint-plugin": "7.1.0",
     "@typescript-eslint/parser": "7.0.2",
     "autoprefixer": "10.4.17",
     "chromatic": "11.0.0",
