@@ -89,8 +89,8 @@ devDependencies:
     specifier: 7.6.17
     version: 7.6.17
   '@storybook/addon-coverage':
-    specifier: 1.0.0
-    version: 1.0.0
+    specifier: 1.0.1
+    version: 1.0.1
   '@storybook/addon-designs':
     specifier: 7.0.9
     version: 7.0.9(@storybook/addon-docs@7.6.17)(@storybook/addons@7.6.17)(@storybook/components@7.6.17)(@storybook/manager-api@7.6.17)(@storybook/preview-api@7.6.17)(@storybook/theming@7.6.17)(react-dom@18.2.0)(react@18.2.0)
@@ -3958,8 +3958,8 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/addon-coverage@1.0.0:
-    resolution: {integrity: sha512-7RMllRtDwyWH2fOeCS7ZG8o5eDTd44C0ZwA+m7dJDrnOXled75RddBPMYF+BsJjeAAWOkWxsII05EKCgS7QG2A==}
+  /@storybook/addon-coverage@1.0.1:
+    resolution: {integrity: sha512-jGDYPBbh3+LXMDw0Nmw+fUEDH3kuHvHSOjE1fqi4ac00CnwHnyD5PD6RFSpVxR4Fw/tCDPmKEubbOzQCSZGyJg==}
     dependencies:
       '@istanbuljs/load-nyc-config': 1.1.0
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
