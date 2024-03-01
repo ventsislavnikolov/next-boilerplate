@@ -34,6 +34,7 @@
     "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
     "import/named": "off",
     "import/default": "off",
+    "import/no-unresolved": "off",
     "unicorn/filename-case": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react/react-in-jsx-scope": "off",
