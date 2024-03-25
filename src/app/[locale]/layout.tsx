@@ -22,6 +22,7 @@ export async function generateMetadata({ params: { locale } }: Props) {
 
   return {
     title: t('title'),
+    description: t('description'),
   };
 }
 

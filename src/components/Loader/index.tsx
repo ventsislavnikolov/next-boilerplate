@@ -21,7 +21,7 @@ const container = cva(
 const spinner = cva(['animate-spin', 'rounded-full'], {
   variants: {
     intent: {
-      primary: ['border-[2px]', 'border-solid', 'border-primary', 'border-t-transparent'],
+      primary: ['border-2', 'border-solid', 'border-primary', 'border-t-transparent'],
     },
     size: {
       md: ['h-[30px]', 'w-[30px]'],
