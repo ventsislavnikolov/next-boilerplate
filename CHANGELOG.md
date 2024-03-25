@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/ventsislavnikolov/next-boilerplate/compare/v2.0.0...v2.0.1) (2024-03-25)
+
+
+### Bug Fixes
+
+* lighthouse score improve ([c8fdeba](https://github.com/ventsislavnikolov/next-boilerplate/commit/c8fdeba15645ac912f2e5e85a45f53048a7b3de5))
+
 # [2.0.0](https://github.com/ventsislavnikolov/next-boilerplate/compare/v1.0.0...v2.0.0) (2024-01-19)
 
 
