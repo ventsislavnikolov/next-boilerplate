@@ -2,4 +2,6 @@ node_modules
 public
 bin
 build
-prettier.config.js
+*.config.cjs
+*.config.js
+*.config.mjs
