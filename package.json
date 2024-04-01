@@ -79,7 +79,7 @@
     "@storybook/blocks": "8.0.4",
     "@storybook/jest": "0.2.3",
     "@storybook/nextjs": "8.0.4",
-    "@storybook/react": "8.0.4",
+    "@storybook/react": "8.0.5",
     "@storybook/react-docgen-typescript-plugin": "1.0.1",
     "@storybook/test": "8.0.4",
     "@storybook/test-runner": "0.17.0",
