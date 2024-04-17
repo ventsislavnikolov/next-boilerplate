@@ -8,10 +8,10 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
-type Props = {
+interface Props {
   children: ReactNode;
   params: { locale: string };
-};
+}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

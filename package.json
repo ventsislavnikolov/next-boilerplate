@@ -33,8 +33,8 @@
     "env:pull": "npx dotenv-vault@latest pull",
     "env:push": "npx dotenv-vault@latest push",
     "commitlint": "npx --no -- commitlint --edit",
-    "prettier": "prettier --check ./src/**/*.{ts,tsx,css}",
-    "prettier:write": "prettier --write ./src/**/*.{ts,tsx,css}",
+    "format": "prettier --check ./src/**/*.{ts,tsx,css}",
+    "format:write": "prettier --write ./src/**/*.{ts,tsx,css}",
     "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN",
     "lint": "npx oxlint --import-plugin --jest-plugin --jsx-a11y-plugin --nextjs-plugin -D all -A nursery -c ./.eslintrc.json --deny-warnings"
   },
