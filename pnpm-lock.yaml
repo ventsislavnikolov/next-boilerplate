@@ -61,7 +61,7 @@ importers:
         specifier: 14.2.3
         version: 14.2.3
       '@next/eslint-plugin-next':
-        specifier: ^14.2.3
+        specifier: 14.2.3
         version: 14.2.3
       '@playwright/test':
         specifier: 1.44.0
@@ -109,7 +109,7 @@ importers:
         specifier: 8.1.1
         version: 8.1.1
       '@storybook/addon-themes':
-        specifier: ^8.1.1
+        specifier: 8.1.1
         version: 8.1.1
       '@storybook/blocks':
         specifier: 8.1.1
@@ -169,7 +169,7 @@ importers:
         specifier: 8.57.0
         version: 8.57.0
       eslint-config-next:
-        specifier: ^14.2.3
+        specifier: 14.2.3
         version: 14.2.3(eslint@8.57.0)(typescript@5.4.5)
       eslint-import-resolver-alias:
         specifier: 1.1.2
