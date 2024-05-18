@@ -17,6 +17,7 @@
   },
   "scripts": {
     "test": "jest",
+    "prepare": "husky",
     "build": "next build",
     "start": "next start",
     "test:ci": "jest --ci",
