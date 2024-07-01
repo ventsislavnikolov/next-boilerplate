@@ -116,7 +116,7 @@
     "prettier-plugin-tailwindcss": "0.6.1",
     "semantic-release": "24.0.0",
     "semantic-release-ado": "1.4.0",
-    "storybook": "8.1.6",
+    "storybook": "8.1.11",
     "storybook-dark-mode": "4.0.1",
     "tailwindcss": "3.4.4",
     "ts-node": "10.9.2",
