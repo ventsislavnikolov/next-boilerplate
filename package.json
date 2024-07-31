@@ -16,7 +16,7 @@
     "name": "Ventsislav Nikolov"
   },
   "engines": {
-    "node": "22.x"
+    "node": "20.x"
   },
   "scripts": {
     "test": "jest",
