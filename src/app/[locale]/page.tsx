@@ -1,8 +1,9 @@
-import { getTranslations, getLocale } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
-import env from '@/env';
 import { Link } from '@/navigation';
+
+import env from '@/env';
 
 async function getData() {
   const res = await fetch(env.API_URL + 'ability/?limit=20&offset=0');

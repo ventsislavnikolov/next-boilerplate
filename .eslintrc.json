@@ -33,6 +33,7 @@
     "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
     "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
     "no-ternary": "off",
+    "no-undefined": "off",
     "import/named": "off",
     "require-await": "off",
     "import/default": "off",
@@ -40,6 +41,7 @@
     "oxc/no-async-await": "off",
     "import/no-unresolved": "off",
     "unicorn/filename-case": "off",
+    "jest/consistent-test-it": "off",
     "jsx-a11y/anchor-is-valid": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-default-export": "off",
@@ -50,7 +52,8 @@
     "unicorn/prevent-abbreviations": "off",
     "jest/require-top-level-describe": "off",
     "tailwindcss/no-custom-classname": "off",
-    "unicorn/no-await-expression-member": "off"
+    "unicorn/no-await-expression-member": "off",
+    "@typescript-eslint/explicit-function-return-type": "off"
   },
   "overrides": [
     {

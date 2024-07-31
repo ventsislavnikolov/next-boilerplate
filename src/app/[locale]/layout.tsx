@@ -1,10 +1,9 @@
+import './globals.css';
+
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import { ReactNode } from 'react';
-
 import { locales } from '@/navigation';
-
-import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
