@@ -1,10 +1,10 @@
 name: Lint, Format, Tests, e2e Testing, Build, Release
 
 on:
- push:
-   branches: [ main ]
- pull_request:
-   branches: [ main ]
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   check:
@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.5.1
+      - name: Use Node 22.6.0
         uses: actions/setup-node@v4
         with:
-          node-version: 22.5.1
+          node-version: 22.6.0
 
       - name: Install PNPM
         run: npm install -g pnpm
@@ -55,10 +55,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.5.1
+      - name: Use Node 22.6.0
         uses: actions/setup-node@v4
         with:
-          node-version: 22.5.1
+          node-version: 22.6.0
 
       - name: Install PNPM
         run: npm install -g pnpm
@@ -86,10 +86,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.5.1
+      - name: Use Node 22.6.0
         uses: actions/setup-node@v4
         with:
-          node-version: 22.5.1
+          node-version: 22.6.0
 
       - name: Install PNPM
         run: npm install -g pnpm
@@ -99,7 +99,7 @@ jobs:
 
       - name: Build
         env:
-          API_URL: "https://pokeapi.co/api/v2/"
+          API_URL: 'https://pokeapi.co/api/v2/'
         run: pnpm build
 
   release:
@@ -113,10 +113,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.5.1
+      - name: Use Node 22.6.0
         uses: actions/setup-node@v4
         with:
-          node-version: 22.5.1
+          node-version: 22.6.0
 
       - name: Install PNPM
         run: npm install -g pnpm
