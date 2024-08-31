@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.6.0
+      - name: Use latest Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.6.0
+          node-version: 22.7.0
 
       - name: Install PNPM
         run: npm install -g pnpm
@@ -55,10 +55,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.6.0
+      - name: Use latest Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.6.0
+          node-version: 22.7.0
 
       - name: Install PNPM
         run: npm install -g pnpm
@@ -86,10 +86,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.6.0
+      - name: Use latest Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.6.0
+          node-version: 22.7.0
 
       - name: Install PNPM
         run: npm install -g pnpm
@@ -113,10 +113,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node 22.6.0
+      - name: Use latest Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22.6.0
+          node-version: 22.7.0
 
       - name: Install PNPM
         run: npm install -g pnpm
