@@ -1,4 +1,6 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
+  branches: ['main'],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -17,10 +19,9 @@ export default {
     [
       'semantic-release-ado',
       {
-        varName: 'semanticVersion',
         setOnlyOnRelease: false,
+        varName: 'semanticVersion',
       },
     ],
   ],
-  branches: ['main'],
 };

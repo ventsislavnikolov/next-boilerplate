@@ -1,59 +1,26 @@
 {
   "root": true,
   "env": {
-    "node": true,
-    "es6": true,
-    "jest": true,
     "es2021": true,
-    "browser": true,
-    "jest/globals": true
+    "browser": true
   },
-  "plugins": ["compat", "lodash", "unicorn", "unused-imports", "@typescript-eslint", "react"],
   "extends": [
-    "plugin:compat/recommended",
-    "plugin:lodash/recommended",
-    "plugin:unicorn/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
     "plugin:tailwindcss/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "eslint:recommended",
-    "next"
+    "next/core-web-vitals",
+    "next",
+    "eslint:recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "./tsconfig.json",
-    "ecmaVersion": "latest",
     "ecmaFeatures": {
       "jsx": true
-    }
-  },
-  "rules": {
-    "compat/compat": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "jsx-quotes": ["error", "prefer-single"],
-    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
-    "max-len": ["error", { "code": 140, "ignoreComments": true, "ignoreStrings": true }],
-    "no-ternary": "off",
-    "no-undefined": "off",
-    "import/named": "off",
-    "require-await": "off",
-    "import/default": "off",
-    "jest/require-hook": "off",
-    "oxc/no-async-await": "off",
-    "import/no-unresolved": "off",
-    "unicorn/filename-case": "off",
-    "jest/consistent-test-it": "off",
-    "jsx-a11y/anchor-is-valid": "off",
-    "react/react-in-jsx-scope": "off",
-    "import/no-default-export": "off",
-    "unicorn/prefer-string-raw": "off",
-    "unicorn/no-zero-fractions": "off",
-    "lodash/prefer-lodash-method": "off",
-    "oxc/no-rest-spread-properties": "off",
-    "unicorn/prevent-abbreviations": "off",
-    "jest/require-top-level-describe": "off",
-    "tailwindcss/no-custom-classname": "off",
-    "unicorn/no-await-expression-member": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "overrides": [
     {
@@ -65,25 +32,52 @@
         "plugin:testing-library/react"
       ],
       "rules": {
-        "jest/expect-expect": "off"
+        "jest/prefer-lowercase-title": ["error", { "ignore": ["describe"] }]
       }
     }
   ],
+  "rules": {
+    "require-await": "error",
+    "sort-keys": ["error", "asc"],
+    "jsx-quotes": ["error", "prefer-single"],
+    "no-undefined": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": false,
+        "peerDependencies": false
+      }
+    ],
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": false,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": false
+      }
+    ],
+    "no-ternary": "off",
+    "no-async-await": "off",
+    "no-magic-numbers": "off",
+    "import/no-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "explicit-function-return-type": "off",
+    "oxc/no-rest-spread-properties": "off",
+    "import/prefer-default-export": "error",
+    "react/jsx-one-expression-per-line": "off" // because problem with prettier
+  },
   "settings": {
-    "polyfills": ["fetch"],
     "jest": {
       "version": 29
     },
-    "import/resolver": {
-      "alias": {
-        "map": [
-          ["store", "./src/store"],
-          ["router", "./src/router"],
-          ["assets", "./src/assets"],
-          ["stories", "./src/stories"],
-          ["components", "./src/components"]
-        ],
-        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "moduleDirectory": ["node_modules", "src/"]
+        }
       }
     }
   }

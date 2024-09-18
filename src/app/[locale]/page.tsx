@@ -1,12 +1,12 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-
 import { Link } from '@/navigation';
+import React from 'react';
 
 import env from '@/env';
 
 async function getData() {
-  const res = await fetch(env.API_URL + 'ability/?limit=20&offset=0');
+  const res = await fetch(`${env.API_URL}ability/?limit=20&offset=0`);
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');
@@ -25,7 +25,8 @@ export default async function Page() {
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
       <div className='z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
         <p className='fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:dark:bg-zinc-800/30'>
-          {t('title')}&nbsp;
+          {t('title')}
+          &nbsp;
           <Link href={otherLocale} locale={otherLocale}>
             {otherLocale.toUpperCase()}
           </Link>
@@ -37,7 +38,7 @@ export default async function Page() {
             target='_blank'
             rel='noopener noreferrer'
           >
-            By{' '}
+            By
             <Image
               src='/vercel.svg'
               alt='Vercel Logo'
@@ -68,13 +69,13 @@ export default async function Page() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
+          <h2 className='mb-3 text-2xl font-semibold'>
+            Docs
             <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className='m-0 max-w-[30ch] text-sm opacity-50'>
             Find in-depth information about Next.js features and API.
           </p>
         </a>
@@ -85,13 +86,13 @@ export default async function Page() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
+          <h2 className='mb-3 text-2xl font-semibold'>
+            Learn
             <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className='m-0 max-w-[30ch] text-sm opacity-50'>
             Learn about Next.js in an interactive course with&nbsp;quizzes!
           </p>
         </a>
@@ -102,13 +103,13 @@ export default async function Page() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
+          <h2 className='mb-3 text-2xl font-semibold'>
+            Templates
             <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className='m-0 max-w-[30ch] text-sm opacity-50'>
             Explore starter templates for Next.js.
           </p>
         </a>
@@ -119,13 +120,13 @@ export default async function Page() {
           target='_blank'
           rel='noopener noreferrer'
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
+          <h2 className='mb-3 text-2xl font-semibold'>
+            Deploy
             <span className='inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none'>
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+          <p className='m-0 max-w-[30ch] text-sm opacity-50'>
             Instantly deploy your Next.js site to a shareable URL with {data.results[0].name}.
           </p>
         </a>

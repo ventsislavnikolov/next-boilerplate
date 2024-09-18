@@ -2,6 +2,7 @@ node_modules
 public
 bin
 build
-*.config.cjs
-*.config.js
-*.config.mjs
+instrumentation.ts
+sentry.client.config.ts
+playwright.config.ts
+commitlint.config.js

@@ -1,8 +1,8 @@
 import './globals.css';
 
+import React, { ReactNode } from 'react';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
-import { ReactNode } from 'react';
 import { locales } from '@/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,12 +20,12 @@ export async function generateMetadata({ params: { locale } }: Props) {
   const t = await getTranslations({ locale, namespace: 'Boilerplate' });
 
   return {
-    title: t('title'),
     description: t('description'),
+    title: t('title'),
   };
 }
 
-export default async function LocaleLayout({ children, params: { locale } }: Props) {
+export default function LocaleLayout({ children, params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 

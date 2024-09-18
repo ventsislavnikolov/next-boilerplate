@@ -1,21 +1,23 @@
-import type { Config } from 'jest'
-import nextJest from 'next/jest.js'
+/* eslint-disable import/extensions */
+import type { Config } from 'jest';
+import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   dir: './',
-})
+});
 
-const config: Config = {clearMocks: true,
+const config: Config = {
+  clearMocks: true,
   collectCoverage: true,
-  coverageDirectory: "coverage",
-  testEnvironment: 'jest-environment-jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  testMatch: ['<rootDir>/tests/**/*.(test).{ts,tsx,js,jsx}'],
+  coverageDirectory: 'coverage',
   moduleNameMapper: {
+    '^@/components/(.*)$': '<rootDir>/src/components/$1',
     '^next$': require.resolve('next'),
     '^next/navigation$': require.resolve('next/navigation'),
-    '^@/components/(.*)$': '<rootDir>/src/components/$1',
   },
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  testEnvironment: 'jest-environment-jsdom',
+  testMatch: ['<rootDir>/tests/**/*.(test).{ts,tsx,js,jsx}'],
 };
 
 export default createJestConfig(config);

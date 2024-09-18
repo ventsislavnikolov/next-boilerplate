@@ -7,18 +7,17 @@ const config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/stories/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  plugins: ['prettier-plugin-tailwindcss'],
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       colors: {
         ...whiteA,
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
     },
   },
-  plugins: ['prettier-plugin-tailwindcss'],
-}
-export default config
+};
+export default config;

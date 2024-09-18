@@ -1,22 +1,22 @@
+import NextIntlPlugin from 'next-intl/plugin';
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
-import NextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig = {
-  reactStrictMode: false,
-  swcMinify: true,
   images: {
     deviceSizes: [320, 420, 768, 1024, 1200],
     loader: 'default',
     remotePatterns: [
       {
-        protocol: 'https',
         hostname: 'res.cloudinary.com',
-        port: '',
         pathname: '/**',
+        port: '',
+        protocol: 'https',
       },
     ],
   },
+  reactStrictMode: false,
+  swcMinify: true,
 };
 
 const withBundleAnalyzerConfig = withBundleAnalyzer({
@@ -24,9 +24,9 @@ const withBundleAnalyzerConfig = withBundleAnalyzer({
 });
 
 const sentryConfig = {
-  silent: true,
   org: 'ventsislavnikolov',
   project: 'next-boilerplate',
+  silent: true,
 };
 
 const withSentry = withSentryConfig(nextConfig, sentryConfig, {
