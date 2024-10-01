@@ -61,7 +61,7 @@
     "@commitlint/cli": "19.5.0",
     "@commitlint/config-conventional": "19.5.0",
     "@commitlint/types": "19.5.0",
-    "@next/bundle-analyzer": "14.2.12",
+    "@next/bundle-analyzer": "14.2.13",
     "@next/eslint-plugin-next": "14.2.12",
     "@playwright/test": "1.47.1",
     "@semantic-release/changelog": "6.0.3",
