@@ -122,7 +122,7 @@
     "semantic-release-ado": "1.4.0",
     "storybook": "8.3.1",
     "storybook-dark-mode": "4.0.2",
-    "tailwindcss": "3.4.12",
+    "tailwindcss": "3.4.13",
     "ts-node": "10.9.2",
     "typescript": "5.6.2"
   },
