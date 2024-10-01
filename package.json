@@ -117,7 +117,7 @@
     "oxlint": "0.9.6",
     "postcss": "8.4.47",
     "prettier": "3.3.3",
-    "prettier-plugin-tailwindcss": "0.6.6",
+    "prettier-plugin-tailwindcss": "0.6.8",
     "semantic-release": "24.1.1",
     "semantic-release-ado": "1.4.0",
     "storybook": "8.3.1",
