@@ -7,7 +7,6 @@
   "extends": [
     "airbnb",
     "airbnb/hooks",
-    "airbnb-typescript",
     "plugin:tailwindcss/recommended",
     "next/core-web-vitals",
     "next",
@@ -37,8 +36,12 @@
     }
   ],
   "rules": {
+    "camelcase": "off",
+    "linebreak-style": "off",
     "require-await": "error",
+    "import/extensions": "off",
     "sort-keys": ["error", "asc"],
+    "react/jsx-filename-extension": "off",
     "jsx-quotes": ["error", "prefer-single"],
     "no-undefined": "error",
     "import/no-extraneous-dependencies": [
