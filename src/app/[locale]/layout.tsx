@@ -1,23 +1,20 @@
+import React from 'react';
+import { Inter } from 'next/font/google';
+import { notFound } from 'next/navigation';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+
+import { routing, locales } from '@/routing';
+
 import './globals.css';
 
-import React, { ReactNode } from 'react';
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
-import { Inter } from 'next/font/google';
-import { locales } from '@/navigation';
-
 const inter = Inter({ subsets: ['latin'] });
-
-interface Props {
-  children: ReactNode;
-  params: { locale: string };
-}
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: Props) {
-  const t = await getTranslations({ locale, namespace: 'Boilerplate' });
+export async function generateMetadata({ params }: { params: any }) {
+  const t = await getTranslations({ locale: params.locale, namespace: 'Boilerplate' });
 
   return {
     description: t('description'),
@@ -25,9 +22,14 @@ export async function generateMetadata({ params: { locale } }: Props) {
   };
 }
 
-export default function LocaleLayout({ children, params: { locale } }: Props) {
+export default function LocaleLayout({ children, params: { locale } }: any) {
+  // Ensure that the incoming `locale` is valid
+  if (!routing.locales.includes(locale)) {
+    notFound();
+  }
+
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return (
     <html lang={locale}>

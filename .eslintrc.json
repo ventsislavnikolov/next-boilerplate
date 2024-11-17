@@ -37,6 +37,7 @@
   ],
   "rules": {
     "camelcase": "off",
+    "sort-imports": "off",
     "linebreak-style": "off",
     "require-await": "error",
     "import/extensions": "off",
@@ -52,16 +53,6 @@
         "peerDependencies": false
       }
     ],
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
-        "allowSeparatedGroups": false
-      }
-    ],
     "no-ternary": "off",
     "no-async-await": "off",
     "no-magic-numbers": "off",
@@ -70,7 +61,9 @@
     "explicit-function-return-type": "off",
     "oxc/no-rest-spread-properties": "off",
     "import/prefer-default-export": "error",
-    "react/jsx-one-expression-per-line": "off" // because problem with prettier
+    "object-curly-newline": "off", // because problem with prettier,
+    "react/jsx-one-expression-per-line": "off", // because problem with prettier,
+    "@typescript-eslint/no-explicit-any": "off"
   },
   "settings": {
     "jest": {

@@ -2,7 +2,7 @@
 
 import Error from 'next/error';
 
-import { locales } from '@/navigation';
+import { locales } from '@/routing';
 
 export default function NotFound() {
   return (

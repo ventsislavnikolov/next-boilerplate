@@ -1,7 +1,8 @@
-import { getLocale, getTranslations } from 'next-intl/server';
-import Image from 'next/image';
-import { Link } from '@/navigation';
 import React from 'react';
+import Image from 'next/image';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+
+import { Link } from '@/routing';
 
 import env from '@/env';
 
@@ -15,11 +16,13 @@ async function getData() {
   return res.json();
 }
 
-export default async function Page() {
+export default async function Page({ params: { locale } }: { params: any }) {
+  // Enable static rendering
+  setRequestLocale(locale);
+
   const data = await getData();
-  const locale = await getLocale();
-  const t = await getTranslations('Boilerplate');
   const otherLocale = locale === 'en' ? 'de' : 'en';
+  const t = await getTranslations({ locale, namespace: 'Boilerplate' });
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>

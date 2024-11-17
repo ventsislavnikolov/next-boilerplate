@@ -1,4 +1,4 @@
-import NextIntlPlugin from 'next-intl/plugin';
+import createNextIntlPlugin from 'next-intl/plugin';
 import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 
@@ -16,7 +16,6 @@ const nextConfig = {
     ],
   },
   reactStrictMode: false,
-  swcMinify: true,
 };
 
 const withBundleAnalyzerConfig = withBundleAnalyzer({
@@ -33,5 +32,5 @@ const withSentry = withSentryConfig(nextConfig, sentryConfig, {
   hideSourceMaps: true,
 });
 
-const withNextIntl = NextIntlPlugin('./src/i18n.ts');
+const withNextIntl = createNextIntlPlugin('./src/request.ts');
 export default withBundleAnalyzerConfig(withNextIntl(withSentry));
