@@ -16,7 +16,8 @@ async function getData() {
   return res.json();
 }
 
-export default async function Page({ params: { locale } }: { params: any }) {
+export default async function Page({ params }: any) {
+  const { locale } = await params;
   // Enable static rendering
   setRequestLocale(locale);
 

@@ -14,7 +14,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: any }) {
-  const t = await getTranslations({ locale: params.locale, namespace: 'Boilerplate' });
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Boilerplate' });
 
   return {
     description: t('description'),
@@ -22,7 +23,8 @@ export async function generateMetadata({ params }: { params: any }) {
   };
 }
 
-export default function LocaleLayout({ children, params: { locale } }: any) {
+export default async function LocaleLayout({ children, params }: any) {
+  const { locale } = await params;
   // Ensure that the incoming `locale` is valid
   if (!routing.locales.includes(locale)) {
     notFound();
