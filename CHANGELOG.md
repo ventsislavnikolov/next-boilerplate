@@ -1,3 +1,15 @@
+## [2.0.2](https://github.com/ventsislavnikolov/next-boilerplate/compare/v2.0.1...v2.0.2) (2024-12-01)
+
+
+### Bug Fixes
+
+* update packages ([49415b8](https://github.com/ventsislavnikolov/next-boilerplate/commit/49415b8927c3dab604344ee73b0eff31bd2a906e))
+
+
+### Reverts
+
+* oxlint to 0.9 ([a585232](https://github.com/ventsislavnikolov/next-boilerplate/commit/a5852329c338fe7a530fd4b2823a4e8a01cdf5d0))
+
 ## [2.0.1](https://github.com/ventsislavnikolov/next-boilerplate/compare/v2.0.0...v2.0.1) (2024-03-25)
 
 
